@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { CartProvider } from "./CartContext"; // Import the CartProvider
+import MenuScreen from "./MenuScreen"; // Your MenuScreen
+import CartScreen from "./CartScreen"; // Your CartScreen
+import { createDrawerNavigator } from "@react-navigation/drawer";
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <CartProvider>
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Menu">
+          <Drawer.Screen name="Menu" component={MenuScreen} />
+          <Drawer.Screen name="Cart" component={CartScreen} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </CartProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

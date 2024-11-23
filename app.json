@@ -23,6 +23,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "SUPABASE_URL": "https://rvgerkgpimopojwwxbea.supabase.co",
+      "SUPABASE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2Z2Vya2dwaW1vcG9qd3d4YmVhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzIzNzQwNTgsImV4cCI6MjA0Nzk1MDA1OH0.aaUR2p9169hYWnGER9d70yQICkke_2ycKjBoWwi6dps"
     }
   }
 }
